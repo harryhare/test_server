@@ -13,7 +13,7 @@ class handler1(BaseHTTPRequestHandler):
             self.send_response(200)
             #self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(b"hello1")
+            self.wfile.write(b"hello1\n")
 
 
 def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
