@@ -1,0 +1,13 @@
+listen to 8000...
+Traceback (most recent call last):
+  File "server.py", line 27, in <module>
+    run(handler_class=handler1)
+  File "server.py", line 23, in run
+    httpd.serve_forever()
+  File "D:\Python\Python36\lib\socketserver.py", line 236, in serve_forever
+    ready = selector.select(poll_interval)
+  File "D:\Python\Python36\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "D:\Python\Python36\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+KeyboardInterrupt

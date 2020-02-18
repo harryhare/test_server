@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-
+import sys
 
 class handler1(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -9,7 +9,7 @@ class handler1(BaseHTTPRequestHandler):
         else:
             print("path:", self.path)
             print(self.request)
-            print(self.headers, flush=True)
+            print(self.headers)
             self.send_response(200)
             # self.send_header("Content-type", "application/json")
             self.end_headers()
@@ -25,3 +25,5 @@ def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     run(handler_class=handler1)
+
+
