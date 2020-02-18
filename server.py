@@ -7,7 +7,8 @@ class handler1(BaseHTTPRequestHandler):
             print("path:", self.path)
             print(self.request)
             print(self.headers)
-            self.wfile.write(b"hello")
+            self.send_response(200)
+            self.wfile.write(b"hello1")
 
 
 def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
