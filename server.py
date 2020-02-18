@@ -9,9 +9,9 @@ class handler1(BaseHTTPRequestHandler):
         else:
             print("path:", self.path)
             print(self.request)
-            print(self.headers)
+            print(self.headers, flush=True)
             self.send_response(200)
-            #self.send_header("Content-type", "application/json")
+            # self.send_header("Content-type", "application/json")
             self.end_headers()
             self.wfile.write(b"hello1\n")
 
@@ -22,5 +22,6 @@ def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
     httpd = server_class(server_address, handler_class)
     httpd.serve_forever()
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     run(handler_class=handler1)
